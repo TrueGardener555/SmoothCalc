@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class TextDisplay extends Component {
 
@@ -7,4 +7,4 @@ class TextDisplay extends Component {
   }
 }
 
-export default TextDisplay
+export default TextDisplay;

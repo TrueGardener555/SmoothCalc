@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-
+import ScreenView from '../components/ScreenView';
 class App extends Component {
+  constructor() {
+    super();
+    
+    // Initial state of the component
+    this.state = {currentVal: 5};
+  }
+
 
   render() {
     return (
       <div className='app'>
-        <div>This is the App Component </div>
-        <div>This is another line</div>
+      <ScreenView currentVal={this.state.currentVal}/>
+      <div>This is the App Component </div>
       </div>
-    )
+    );
   }
 
 }
