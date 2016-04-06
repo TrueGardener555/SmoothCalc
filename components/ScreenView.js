@@ -5,17 +5,24 @@ class ScreenView extends Component {
     super(props);
 
     // Initial state of the component
-    this.state = {cool: 5};
   }
-
-
+  
+  handleClick() {
+      console.log(' someghint');
+  }
   render() {
-    return <div>value of props: {this.props.currentVal} </div>;
+    return (
+      <div>
+      value of props: {this.props.currVal} 
+      <button onClick={this.props.updateCurrVal}>update</button>
+      </div>
+    );
   }
 }
 
 ScreenView.propTypes = {
-  currentVal: React.PropTypes.any.isRequired
+  currVal: React.PropTypes.string.isRequired,
+  updateCurrVal: React.PropTypes.func
 };
 export default ScreenView;
 

@@ -5,14 +5,17 @@ class App extends Component {
     super();
     
     // Initial state of the component
-    this.state = {currentVal: 5};
+    this.state = {currVal: '0'};
   }
 
-
+  updateCurrVal() {
+    console.log('hi');  
+    this.setState({currVal: this.state.currVal + '4'});
+  }
   render() {
     return (
       <div className='app'>
-      <ScreenView currentVal={this.state.currentVal}/>
+      <ScreenView currVal={this.state.currVal} updateCurrVal={this.updateCurrVal.bind(this)}/>
       <div>This is the App Component </div>
       </div>
     );
