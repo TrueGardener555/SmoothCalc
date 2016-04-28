@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import ScreenView from '../components/ScreenView';
+
+var divStyle = {
+  fontSize: 30,
+  color: 'red'
+};
+
 class App extends Component {
   constructor() {
     super();
@@ -15,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-      <ScreenView currVal={this.state.currVal} updateCurrVal={this.updateCurrVal.bind(this)}/>
+      <ScreenView style={divStyle} className='screen' currVal={this.state.currVal} updateCurrVal={this.updateCurrVal.bind(this)}/>
       <div>This is the App Component </div>
       </div>
     );

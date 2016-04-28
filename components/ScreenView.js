@@ -12,7 +12,7 @@ class ScreenView extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='screen'>
       value of props: {this.props.currVal} 
       <button onClick={this.props.updateCurrVal}>update</button>
       </div>
