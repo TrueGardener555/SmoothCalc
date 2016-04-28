@@ -45,16 +45,11 @@ class App extends Component {
   zeroButton() {
    this.setState({currVal: this.state.currVal + '0'});
   }
-  twoButton() {
-   this.setState({currVal: this.state.currVal + '2'});
+  decimalButton() {
+   this.setState({currVal: this.state.currVal + '.'});
   }
-  twoButton() {
-   this.setState({currVal: this.state.currVal + '2'});
-  }
-  
-  updateCurrVal() {
-    console.log('hi');  
-    this.setState({currVal: this.state.currVal + '4'});
+  plusMinusButton() {
+   this.setState({currVal: this.state.currVal + '+/-'});
   }
   render() {
     return (
@@ -71,6 +66,8 @@ class App extends Component {
         eightButton={this.eightButton.bind(this)}
         nineButton={this.nineButton.bind(this)}
         zeroButton={this.zeroButton.bind(this)}
+        decimalButton={this.decimalButton.bind(this)}
+        plusMinusButton={this.plusMinusButton.bind(this)}
       />
       <div>This is the App Component </div>
       </div>
