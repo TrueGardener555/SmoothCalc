@@ -14,13 +14,44 @@ class App extends Component {
     this.state = {currVal: '0'};
   }
 
+  // Buttons that will add to the input of the screen
   oneButton() {
    this.setState({currVal: this.state.currVal + '1'});
   }
   twoButton() {
    this.setState({currVal: this.state.currVal + '2'});
   }
-
+  threeButton() {
+   this.setState({currVal: this.state.currVal + '3'});
+  }
+  fourButton() {
+   this.setState({currVal: this.state.currVal + '4'});
+  }
+  fiveButton() {
+   this.setState({currVal: this.state.currVal + '5'});
+  }
+  sixButton() {
+   this.setState({currVal: this.state.currVal + '6'});
+  }
+  sevenButton() {
+   this.setState({currVal: this.state.currVal + '7'});
+  }
+  eightButton() {
+   this.setState({currVal: this.state.currVal + '8'});
+  }
+  nineButton() {
+   this.setState({currVal: this.state.currVal + '9'});
+  }
+  zeroButton() {
+   this.setState({currVal: this.state.currVal + '0'});
+  }
+  twoButton() {
+   this.setState({currVal: this.state.currVal + '2'});
+  }
+  twoButton() {
+   this.setState({currVal: this.state.currVal + '2'});
+  }
+  
   updateCurrVal() {
     console.log('hi');  
     this.setState({currVal: this.state.currVal + '4'});
@@ -32,7 +63,14 @@ class App extends Component {
         currVal={this.state.currVal}
         oneButton={this.oneButton.bind(this)}
         twoButton={this.twoButton.bind(this)}
-        updateCurrVal={this.updateCurrVal.bind(this)}
+        threeButton={this.threeButton.bind(this)}
+        fourButton={this.fourButton.bind(this)}
+        fiveButton={this.fiveButton.bind(this)}
+        sixButton={this.sixButton.bind(this)}
+        sevenButton={this.sevenButton.bind(this)}
+        eightButton={this.eightButton.bind(this)}
+        nineButton={this.nineButton.bind(this)}
+        zeroButton={this.zeroButton.bind(this)}
       />
       <div>This is the App Component </div>
       </div>
