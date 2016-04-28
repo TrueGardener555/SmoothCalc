@@ -4,6 +4,7 @@ body {
 }
 
 .screen {
-  border: 5px solid #dddddd;
+  border: 5px solid #28283e;
+  background-color: #e0e0eb;
   color: green;
 }

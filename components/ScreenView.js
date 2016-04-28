@@ -6,15 +6,19 @@ class ScreenView extends Component {
 
     // Initial state of the component
   }
-  
+
   handleClick() {
-      console.log(' someghint');
+    console.log(' someghint');
   }
   render() {
     return (
-      <div className='screen'>
-      value of props: {this.props.currVal} 
-      <button onClick={this.props.updateCurrVal}>update</button>
+      <div>
+        <div className='screen'>
+          value of props: {this.props.currVal} 
+        </div>
+        <button onClick={this.props.updateCurrVal}>update</button>
+        <button onClick={this.props.oneButton}>1</button>
+        <button onClick={this.props.twoButton}>2</button>
       </div>
     );
   }

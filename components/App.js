@@ -14,6 +14,13 @@ class App extends Component {
     this.state = {currVal: '0'};
   }
 
+  oneButton() {
+   this.setState({currVal: this.state.currVal + '1'});
+  }
+  twoButton() {
+   this.setState({currVal: this.state.currVal + '2'});
+  }
+
   updateCurrVal() {
     console.log('hi');  
     this.setState({currVal: this.state.currVal + '4'});
@@ -21,7 +28,12 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-      <ScreenView style={divStyle} className='screen' currVal={this.state.currVal} updateCurrVal={this.updateCurrVal.bind(this)}/>
+      <ScreenView 
+        currVal={this.state.currVal}
+        oneButton={this.oneButton.bind(this)}
+        twoButton={this.twoButton.bind(this)}
+        updateCurrVal={this.updateCurrVal.bind(this)}
+      />
       <div>This is the App Component </div>
       </div>
     );
