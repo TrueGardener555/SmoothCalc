@@ -14,7 +14,15 @@ class ScreenView extends Component {
     return (
       <div>
         <div className='screen'>
-          value of props: {this.props.currVal} 
+          <div>
+            register z: {this.props.currVal[2]} 
+          </div>
+          <div>
+            register y: {this.props.currVal[1]} 
+          </div>
+          <div>
+            register x: {this.props.currVal[0]} 
+          </div>
         </div>
         <div>
           <button onClick={this.props.sevenButton}>7</button>
@@ -35,6 +43,7 @@ class ScreenView extends Component {
           <button onClick={this.props.zeroButton}>0</button>
           <button onClick={this.props.decimalButton}>.</button>
           <button onClick={this.props.plusMinusButton}>+/-</button>
+          <button onClick={this.props.enterButton}>ENTER</button>
         </div>
       </div>
     );
@@ -42,7 +51,7 @@ class ScreenView extends Component {
 }
 
 ScreenView.propTypes = {
-  currVal: React.PropTypes.string.isRequired,
+  currVal: React.PropTypes.array.isRequired,
   updateCurrVal: React.PropTypes.func
 };
 export default ScreenView;

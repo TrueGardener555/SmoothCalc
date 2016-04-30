@@ -71,14 +71,20 @@ class App extends Component {
     temp.unshift(this.state.currVal[0] + '.');
     this.setState({currVal: temp});
   }
+  // Work on this functionality
   plusMinusButton() {
     this.setState({currVal: this.state.currVal + '+/-'});
+  }
+
+  enterButton(){
+    let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
+    this.setState({currVal: temp});
   }
   render() {
     return (
       <div className='app'>
       <ScreenView 
-        currVal={this.state.currVal[0]}
+        currVal={this.state.currVal}
         oneButton={this.oneButton.bind(this)}
         twoButton={this.twoButton.bind(this)}
         threeButton={this.threeButton.bind(this)}
@@ -91,6 +97,7 @@ class App extends Component {
         zeroButton={this.zeroButton.bind(this)}
         decimalButton={this.decimalButton.bind(this)}
         plusMinusButton={this.plusMinusButton.bind(this)}
+        enterButton={this.enterButton.bind(this)}
       />
       <div>This is the App Component </div>
       </div>
