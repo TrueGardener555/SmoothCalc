@@ -8,7 +8,7 @@ class ScreenView extends Component {
   }
 
   handleClick() {
-    console.log(' someghint');
+
   }
   render() {
     return (

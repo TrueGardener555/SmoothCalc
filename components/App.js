@@ -11,51 +11,74 @@ class App extends Component {
     super();
     
     // Initial state of the component
-    this.state = {currVal: '0'};
+    this.state = {currVal: ['0']};
   }
 
   // Buttons that will add to the input of the screen
   oneButton() {
-   this.setState({currVal: this.state.currVal + '1'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '1');
+    this.setState({currVal: temp});
   }
   twoButton() {
-   this.setState({currVal: this.state.currVal + '2'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '2');
+    this.setState({currVal: temp});
   }
   threeButton() {
-   this.setState({currVal: this.state.currVal + '3'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '3');
+    this.setState({currVal: temp});
   }
   fourButton() {
-   this.setState({currVal: this.state.currVal + '4'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '4');
+    this.setState({currVal: temp});
+
   }
   fiveButton() {
-   this.setState({currVal: this.state.currVal + '5'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '5');
+    this.setState({currVal: temp});
   }
   sixButton() {
-   this.setState({currVal: this.state.currVal + '6'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '6');
+    this.setState({currVal: temp});
   }
   sevenButton() {
-   this.setState({currVal: this.state.currVal + '7'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '7');
+    this.setState({currVal: temp});
   }
   eightButton() {
-   this.setState({currVal: this.state.currVal + '8'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '8');
+    this.setState({currVal: temp});
   }
   nineButton() {
-   this.setState({currVal: this.state.currVal + '9'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '9');
+    this.setState({currVal: temp});
   }
   zeroButton() {
-   this.setState({currVal: this.state.currVal + '0'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '0');
+    this.setState({currVal: temp});
   }
   decimalButton() {
-   this.setState({currVal: this.state.currVal + '.'});
+    let temp = this.state.currVal.slice(1);
+    temp.unshift(this.state.currVal[0] + '.');
+    this.setState({currVal: temp});
   }
   plusMinusButton() {
-   this.setState({currVal: this.state.currVal + '+/-'});
+    this.setState({currVal: this.state.currVal + '+/-'});
   }
   render() {
     return (
       <div className='app'>
       <ScreenView 
-        currVal={this.state.currVal}
+        currVal={this.state.currVal[0]}
         oneButton={this.oneButton.bind(this)}
         twoButton={this.twoButton.bind(this)}
         threeButton={this.threeButton.bind(this)}
