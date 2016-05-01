@@ -33,11 +33,15 @@ class ScreenView extends Component {
           <button onClick={this.props.fourButton}>4</button>
           <button onClick={this.props.fiveButton}>5</button>
           <button onClick={this.props.sixButton}>6</button>
+          <button onClick={this.props.multiplyButton}>x</button>
+          <button onClick={this.props.divideButton}>/</button>
         </div>
         <div>
           <button onClick={this.props.oneButton}>1</button>
           <button onClick={this.props.twoButton}>2</button>
           <button onClick={this.props.threeButton}>3</button>
+          <button onClick={this.props.addButton}>+</button>
+          <button onClick={this.props.subtractButton}>-</button>
         </div>
         <div>
           <button onClick={this.props.zeroButton}>0</button>

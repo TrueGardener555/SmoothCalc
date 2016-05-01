@@ -71,11 +71,42 @@ class App extends Component {
     temp.unshift(this.state.currVal[0] + '.');
     this.setState({currVal: temp});
   }
-  // Work on this functionality
   plusMinusButton() {
-    this.setState({currVal: this.state.currVal + '+/-'});
+    let temp = [this.state.currVal[0] * -1].concat(this.state.currVal.slice(1));
+    this.setState({currVal: temp});
   }
+  addButton() {
+    // Only multiply if there's more than one value in the stack
+    console.log('thisadaf');
+    if (this.state.currVal.length > 1) {
+      let val1 = parseInt(this.state.currVal[0], 10);
+      let val2 = parseInt(this.state.currVal[0], 10);
+      let temp = [val1 + val2].concat(this.state.currVal.slice(2));
+      this.setState({currVal: temp});
+    }
+  }
+  subtractButton() {
+    // Only multiply if there's more than one value in the stack
+    if (this.state.currVal.length > 1) {
+      let temp = [this.state.currVal[1] - this.state.currVal[0]].concat(this.state.currVal.slice(2));
+      this.setState({currVal: temp});
+    }
+  }
+  multiplyButton() {
+    // Only multiply if there's more than one value in the stack
+    if (this.state.currVal.length > 1) {
+      let temp = [this.state.currVal[0] * this.state.currVal[1]].concat(this.state.currVal.slice(2));
+      this.setState({currVal: temp});
+    }
+  }
+  divideButton() {
+    // Only multiply if there's more than one value in the stack
+    if (this.state.currVal.length > 1) {
+      let temp = [this.state.currVal[1] / this.state.currVal[0]].concat(this.state.currVal.slice(2));
+      this.setState({currVal: temp});
+    }
 
+  }
   enterButton(){
     let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
     this.setState({currVal: temp});
@@ -88,12 +119,16 @@ class App extends Component {
         oneButton={this.oneButton.bind(this)}
         twoButton={this.twoButton.bind(this)}
         threeButton={this.threeButton.bind(this)}
+        addButton={this.addButton.bind(this)}
+        subtractButton={this.subtractButton.bind(this)}
         fourButton={this.fourButton.bind(this)}
         fiveButton={this.fiveButton.bind(this)}
         sixButton={this.sixButton.bind(this)}
         sevenButton={this.sevenButton.bind(this)}
         eightButton={this.eightButton.bind(this)}
         nineButton={this.nineButton.bind(this)}
+        multiplyButton={this.multiplyButton.bind(this)}
+        divideButton={this.divideButton.bind(this)}
         zeroButton={this.zeroButton.bind(this)}
         decimalButton={this.decimalButton.bind(this)}
         plusMinusButton={this.plusMinusButton.bind(this)}
