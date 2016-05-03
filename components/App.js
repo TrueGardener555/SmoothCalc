@@ -34,7 +34,6 @@ class App extends Component {
     let temp = this.state.currVal.slice(1);
     temp.unshift(this.state.currVal[0] + '4');
     this.setState({currVal: temp});
-
   }
   fiveButton() {
     let temp = this.state.currVal.slice(1);
@@ -76,8 +75,7 @@ class App extends Component {
     this.setState({currVal: temp});
   }
   addButton() {
-    // Only multiply if there's more than one value in the stack
-    console.log('thisadaf');
+    // Only add if there's more than one value in the stack
     if (this.state.currVal.length > 1) {
       let val1 = parseInt(this.state.currVal[0], 10);
       let val2 = parseInt(this.state.currVal[0], 10);
@@ -86,7 +84,7 @@ class App extends Component {
     }
   }
   subtractButton() {
-    // Only multiply if there's more than one value in the stack
+    // Only subtract if there's more than one value in the stack
     if (this.state.currVal.length > 1) {
       let temp = [this.state.currVal[1] - this.state.currVal[0]].concat(this.state.currVal.slice(2));
       this.setState({currVal: temp});
@@ -100,15 +98,21 @@ class App extends Component {
     }
   }
   divideButton() {
-    // Only multiply if there's more than one value in the stack
+    // Only divide if there's more than one value in the stack
     if (this.state.currVal.length > 1) {
       let temp = [this.state.currVal[1] / this.state.currVal[0]].concat(this.state.currVal.slice(2));
       this.setState({currVal: temp});
     }
-
   }
   enterButton(){
     let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
+    this.setState({currVal: temp});
+  }
+  backspaceButton() {
+    let temp = this.state.currVal.slice(1);
+    let currReg = this.state.currVal[0];
+    currReg = currReg.substring(0, currReg.length - 1);
+    temp.unshift(currReg);
     this.setState({currVal: temp});
   }
   powerButton(){
@@ -137,6 +141,7 @@ class App extends Component {
         divideButton={this.divideButton.bind(this)}
         powerButton={this.powerButton.bind(this)}
         zeroButton={this.zeroButton.bind(this)}
+        backspaceButton={this.backspaceButton.bind(this)}
         decimalButton={this.decimalButton.bind(this)}
         plusMinusButton={this.plusMinusButton.bind(this)}
         enterButton={this.enterButton.bind(this)}
