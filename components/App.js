@@ -111,6 +111,12 @@ class App extends Component {
     let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
     this.setState({currVal: temp});
   }
+  powerButton(){
+    if (this.state.currVal.length > 1) {
+      let temp = [Math.pow(this.state.currVal[1], this.state.currVal[0])].concat(this.state.currVal.slice(2));
+      this.setState({currVal: temp});
+    }
+  }
   render() {
     return (
       <div className='app'>
@@ -129,6 +135,7 @@ class App extends Component {
         nineButton={this.nineButton.bind(this)}
         multiplyButton={this.multiplyButton.bind(this)}
         divideButton={this.divideButton.bind(this)}
+        powerButton={this.powerButton.bind(this)}
         zeroButton={this.zeroButton.bind(this)}
         decimalButton={this.decimalButton.bind(this)}
         plusMinusButton={this.plusMinusButton.bind(this)}

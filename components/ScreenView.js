@@ -28,6 +28,8 @@ class ScreenView extends Component {
           <button onClick={this.props.sevenButton}>7</button>
           <button onClick={this.props.eightButton}>8</button>
           <button onClick={this.props.nineButton}>9</button>
+          <button onClick={this.props.powerButton}>y^x</button>
+          <button onClick={this.props.backspaceButton}>&lt;-</button>
         </div>
         <div>
           <button onClick={this.props.fourButton}>4</button>
