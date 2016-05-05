@@ -19,6 +19,10 @@ class App extends Component {
     let temp = this.state.currVal.slice(1);
     temp.unshift(this.state.currVal[0] + '1');
     this.setState({currVal: temp});
+    if (this.state.clean) {
+      console.log(this.state.clean);
+      //this.setState({clean: !this.state.clean});
+    }
   }
   twoButton() {
     let temp = this.state.currVal.slice(1);
@@ -106,7 +110,7 @@ class App extends Component {
   }
   enterButton(){
     let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
-    this.setState({currVal: temp});
+    this.setState({currVal: temp, clean: true});
   }
   backspaceButton() {
     let temp = this.state.currVal.slice(1);
