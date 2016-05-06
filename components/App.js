@@ -13,61 +13,46 @@ class App extends Component {
     // Initial state of the component
     this.state = {currVal: ['0']};
   }
-
-  // Buttons that will add to the input of the screen
-  oneButton() {
+  
+  addToRegister(character) {
     let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '1');
+    temp.unshift(this.state.currVal[0] + character);
     this.setState({currVal: temp});
     if (this.state.clean) {
       console.log(this.state.clean);
       //this.setState({clean: !this.state.clean});
     }
   }
+  // Buttons that will add to the input of the screen
+  oneButton() {
+    this.addToRegister('1');
+  }
   twoButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '2');
-    this.setState({currVal: temp});
+    this.addToRegister('2');
   }
   threeButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '3');
-    this.setState({currVal: temp});
+    this.addToRegister('3');
   }
   fourButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '4');
-    this.setState({currVal: temp});
+    this.addToRegister('4');
   }
   fiveButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '5');
-    this.setState({currVal: temp});
+    this.addToRegister('5');
   }
   sixButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '6');
-    this.setState({currVal: temp});
+    this.addToRegister('6');
   }
   sevenButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '7');
-    this.setState({currVal: temp});
+    this.addToRegister('7');
   }
   eightButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '8');
-    this.setState({currVal: temp});
+    this.addToRegister('8');
   }
   nineButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '9');
-    this.setState({currVal: temp});
+    this.addToRegister('9');
   }
   zeroButton() {
-    let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + '0');
-    this.setState({currVal: temp});
+    this.addToRegister('0');
   }
   decimalButton() {
     let temp = this.state.currVal.slice(1);
