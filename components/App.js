@@ -23,6 +23,7 @@ class App extends Component {
       //this.setState({clean: !this.state.clean});
     }
   }
+  
   // Buttons that will add to the input of the screen
   oneButton() {
     this.addToRegister('1');
@@ -97,6 +98,9 @@ class App extends Component {
     let temp = this.state.currVal.slice(0,1).concat(this.state.currVal);
     this.setState({currVal: temp, clean: true});
   }
+  clearButton() {
+    this.setState({currVal: ['0']});
+  }
   backspaceButton() {
     let temp = this.state.currVal.slice(1);
     let currReg = this.state.currVal[0];
@@ -134,6 +138,7 @@ class App extends Component {
         decimalButton={this.decimalButton.bind(this)}
         plusMinusButton={this.plusMinusButton.bind(this)}
         enterButton={this.enterButton.bind(this)}
+        clearButton={this.clearButton.bind(this)}
       />
       <div>This is the App Component </div>
       </div>

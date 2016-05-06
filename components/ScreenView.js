@@ -50,6 +50,7 @@ class ScreenView extends Component {
           <button onClick={this.props.decimalButton}>.</button>
           <button onClick={this.props.plusMinusButton}>+/-</button>
           <button onClick={this.props.enterButton}>ENTER</button>
+          <button onClick={this.props.clearButton}>C</button>
         </div>
       </div>
     );
