@@ -11,7 +11,7 @@ class App extends Component {
     super();
     
     // Initial state of the component
-    this.state = {currVal: ['0']};
+    this.state = {currVal: [0]};
   }
   
   addToRegister(character) {
@@ -26,7 +26,7 @@ class App extends Component {
   
   // Buttons that will add to the input of the screen
   oneButton() {
-    this.addToRegister('1');
+    this.addToRegister(1);
   }
   twoButton() {
     this.addToRegister('2');
