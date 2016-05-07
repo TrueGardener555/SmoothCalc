@@ -11,12 +11,12 @@ class App extends Component {
     super();
     
     // Initial state of the component
-    this.state = {currVal: [0]};
+    this.state = {currVal: ['0']};
   }
   
   addToRegister(character) {
     let temp = this.state.currVal.slice(1);
-    temp.unshift(this.state.currVal[0] + character);
+    temp.unshift(parseInt(this.state.currVal[0] + character, 10));
     this.setState({currVal: temp});
     if (this.state.clean) {
       console.log(this.state.clean);
@@ -26,7 +26,7 @@ class App extends Component {
   
   // Buttons that will add to the input of the screen
   oneButton() {
-    this.addToRegister(1);
+    this.addToRegister('1');
   }
   twoButton() {
     this.addToRegister('2');
@@ -68,7 +68,7 @@ class App extends Component {
     // Only add if there's more than one value in the stack
     if (this.state.currVal.length > 1) {
       let val1 = parseInt(this.state.currVal[0], 10);
-      let val2 = parseInt(this.state.currVal[0], 10);
+      let val2 = parseInt(this.state.currVal[1], 10);
       let temp = [val1 + val2].concat(this.state.currVal.slice(2));
       this.setState({currVal: temp});
     }
