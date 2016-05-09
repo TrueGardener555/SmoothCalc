@@ -11,7 +11,7 @@ class App extends Component {
     super();
     
     // Initial state of the component
-    this.state = {currVal: ['0']};
+    this.state = {currVal: ['0'], clean: true};
   }
   
   addToRegister(character) {
