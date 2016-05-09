@@ -16,13 +16,13 @@ class App extends Component {
   
   addToRegister(character) {
     let temp = this.state.currVal.slice(1);
-    console.log('char is', typeof character); 
-    temp.unshift(parseFloat(this.state.currVal[0] + character, 10));
-    this.setState({currVal: temp});
-
     if (this.state.clean) {
-      console.log(this.state.clean);
-      //this.setState({clean: !this.state.clean});
+      temp.unshift(parseFloat(character, 10));
+      this.setState({currVal: temp, clean: false});
+    }
+    else {
+      temp.unshift(parseFloat(this.state.currVal[0] + character, 10));
+      this.setState({currVal: temp});
     }
   }
   
