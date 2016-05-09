@@ -105,7 +105,7 @@ class App extends Component {
   }
   backspaceButton() {
     let temp = this.state.currVal.slice(1);
-    let currReg = this.state.currVal[0];
+    let currReg = '' + this.state.currVal[0];
     currReg = currReg.substring(0, currReg.length - 1);
     temp.unshift(currReg);
     this.setState({currVal: temp});
