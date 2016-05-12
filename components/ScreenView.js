@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
+//import { dist } from 'dist/css/bootstrap.css';
 
 class ScreenView extends Component {
   constructor(props) {
@@ -24,6 +26,9 @@ class ScreenView extends Component {
             register x: {this.props.currVal[0]} 
           </div>
         </div>
+        <button bsStyle="primary" bsSize="xsmall">
+          cool
+        </button >
         <div>
           <button onClick={this.props.sevenButton}>7</button>
           <button onClick={this.props.eightButton}>8</button>
