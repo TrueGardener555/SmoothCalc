@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 
 class ScreenView extends Component {
   constructor(props) {
@@ -15,46 +15,44 @@ class ScreenView extends Component {
     return (
       <div>
         <div className='screen'>
-          <div>
+          <div className="register">
             register z: {this.props.currVal[2]} 
           </div>
-          <div>
+          <div className="register">
             register y: {this.props.currVal[1]} 
           </div>
-          <div>
+          <div className="register">
             register x: {this.props.currVal[0]} 
           </div>
         </div>
-        <button className="btn btn-success" bsStyle="primary" bsSize="xsmall">
-          cool
-        </button >
-        <div>
-          <button onClick={this.props.sevenButton}>7</button>
-          <button onClick={this.props.eightButton}>8</button>
-          <button onClick={this.props.nineButton}>9</button>
-          <button onClick={this.props.powerButton}>y^x</button>
-          <button onClick={this.props.backspaceButton}>&lt;-</button>
+        <div className='row'>
+          <div className="col-md-1 btn btn-success" onClick={this.props.sevenButton}>7</div>
+
+          <div className="col-md-1 btn btn-success" onClick={this.props.eightButton}>8</div>
+          <div className="col-md-1 btn btn-success" onClick={this.props.nineButton}>9</div>
+          <div className="col-md-1 btn btn-success" onClick={this.props.powerButton}>y^x</div>
+          <div className="col-md-1 btn btn-success" onClick={this.props.backspaceButton}>&lt;-</div>
         </div>
-        <div>
-          <button onClick={this.props.fourButton}>4</button>
-          <button onClick={this.props.fiveButton}>5</button>
-          <button onClick={this.props.sixButton}>6</button>
-          <button onClick={this.props.multiplyButton}>x</button>
-          <button onClick={this.props.divideButton}>/</button>
+        <div className='row'>
+          <span className="col-md-1 btn btn-success" onClick={this.props.fourButton}>4</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.fiveButton}>5</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.sixButton}>6</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.multiplyButton}>x</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.divideButton}>/</span>
         </div>
-        <div>
-          <button onClick={this.props.oneButton}>1</button>
-          <button onClick={this.props.twoButton}>2</button>
-          <button onClick={this.props.threeButton}>3</button>
-          <button onClick={this.props.addButton}>+</button>
-          <button onClick={this.props.subtractButton}>-</button>
+        <div className='row'>
+          <span className="col-md-1 btn btn-success" onClick={this.props.oneButton}>1</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.twoButton}>2</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.threeButton}>3</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.addButton}>+</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.subtractButton}>-</span>
         </div>
-        <div>
-          <button onClick={this.props.zeroButton}>0</button>
-          <button onClick={this.props.decimalButton}>.</button>
-          <button onClick={this.props.plusMinusButton}>+/-</button>
-          <button onClick={this.props.enterButton}>ENTER</button>
-          <button onClick={this.props.clearButton}>C</button>
+        <div className='row'>
+          <span className="col-md-1 btn btn-success" onClick={this.props.zeroButton}>0</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.decimalButton}>.</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.plusMinusButton}>+/-</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.enterButton}>ENTER</span>
+          <span className="col-md-1 btn btn-success" onClick={this.props.clearButton}>C</span>
         </div>
       </div>
     );

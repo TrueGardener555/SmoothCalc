@@ -142,7 +142,6 @@ class App extends Component {
         enterButton={this.enterButton.bind(this)}
         clearButton={this.clearButton.bind(this)}
       />
-      <div>This is the App Component </div>
       </div>
     );
   }
