@@ -28,9 +28,7 @@ class ScreenView extends Component {
         <div className="allButtons">
           <div className='row'>
             <div className="col-md-1 btn btn-success" onClick={this.props.sevenButton}>7</div>
-
-            <div className="col-md-1 btn btn-success" onClick={this.props.eightButton}>8</div>
-            <div className="col-md-1 btn btn-success" onClick={this.props.nineButton}>9</div>
+            <div className="col-md-1 btn btn-success" onClick={this.props.eightButton}>8</div> <div className="col-md-1 btn btn-success" onClick={this.props.nineButton}>9</div>
             <div className="col-md-1 btn btn-success" onClick={this.props.powerButton}>y^x</div>
             <div className="col-md-1 btn btn-success" onClick={this.props.backspaceButton}>&lt;-</div>
           </div>
