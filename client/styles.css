@@ -29,7 +29,7 @@ body {
   color: blue;
 }
 
-.row {
-  padding-left: 12px;
-  padding-right: 12px;
+.btn {
+  margin: 0px 12px 0px 12px;
+  
 }
