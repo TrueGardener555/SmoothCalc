@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import ScreenView from '../components/ScreenView';
 
-var divStyle = {
-  fontSize: 30,
-  color: 'red'
-};
-
 class App extends Component {
   constructor() {
     super();
