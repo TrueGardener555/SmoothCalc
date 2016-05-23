@@ -27,7 +27,11 @@ module.exports = {
           presets: ['react', 'es2015', 'react-hmre']
         }
       },
-      { test: /\.less$/, loader: "style!css!less" },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loaders: ['style', 'css', 'sass']
+      },
       { 
         test: /\.png$/, 
         loader: "url-loader?limit=100000" 
