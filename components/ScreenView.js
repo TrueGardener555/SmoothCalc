@@ -31,9 +31,9 @@ class ScreenView extends Component {
         </div>
         <div className="allButtons">
           <div className='row'>
-            <div className="col-1-5" onClick={this.props.sevenButton}>7</div>
-            <div className="col-1-5" onClick={this.props.eightButton}>8</div>
-            <div className="col-1-5" onClick={this.props.nineButton}>9</div>
+            <button className="col-1-5" onClick={this.props.sevenButton}>7</button>
+            <button className="col-1-5" onClick={this.props.eightButton}>8</button>
+            <button className="col-1-5" onClick={this.props.nineButton}>9</button>
             <div className="col-1-5" onClick={this.props.powerButton}>y^x</div>
             <div className="col-1-5" onClick={this.props.backspaceButton}>&lt;-</div>
           </div>
