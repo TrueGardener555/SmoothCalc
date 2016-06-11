@@ -9,16 +9,18 @@ class ScreenView extends Component {
     // testing ability to push to github
   }
 
-  handleClick() {
-
+  handleKey(e) {
+    console.log('***************', e.charCode);
+    this.props.eightButton();
   }
+
   render() {
     return (
-      <div>
+      <div onKeyPress={this.handleKey.bind(this)} tabIndex="1">
         <div className="screenTitle">
           <h1>A really Smooth RPN Calculator</h1>
         </div>
-        <div className='screen'>
+        <div className='screen' onKeyPress={this.handleKey} tabIndex="1">
           <div className="register">
             register z: {this.props.currVal[2]} 
           </div>
@@ -29,9 +31,9 @@ class ScreenView extends Component {
             register x: {this.props.currVal[0]} 
           </div>
         </div>
-        <div className="allButtons">
+        <div className="allButtons" >
           <div className='row'>
-            <div className="col-1-5 button" onClick={this.props.sevenButton}>7</div>
+            <div className="col-1-5 button" >7</div>
             <div className="col-1-5 button" onClick={this.props.eightButton}>8</div>
             <div className="col-1-5 button" onClick={this.props.nineButton}>9</div>
             <div className="col-1-5 button" onClick={this.props.powerButton}>y^x</div>

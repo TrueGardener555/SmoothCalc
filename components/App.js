@@ -111,6 +111,7 @@ class App extends Component {
       this.setState({currVal: temp});
     }
   }
+
   render() {
     return (
       <div className='app'>
