@@ -21,6 +21,9 @@ class ScreenView extends Component {
         e.preventDefault();
         this.props.backspaceButton();
         break; 
+      case 13:
+        this.props.enterButton();
+        break;
       case 48:
         this.props.zeroButton();
         break;
