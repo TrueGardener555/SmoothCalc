@@ -9,18 +9,58 @@ class ScreenView extends Component {
     // testing ability to push to github
   }
 
+  backspace(e) {
+    e.preventDefault();
+    console.log('&&&&&&&&&&&&&&&&&&&&', e.charCode);
+  }
+
   handleKey(e) {
     console.log('***************', e.charCode);
-    this.props.eightButton();
+    switch (e.charCode) {
+      case 8:
+        e.preventDefault();
+        this.props.backspaceButton();
+        break; 
+      case 48:
+        this.props.zeroButton();
+        break;
+      case 49:
+        this.props.oneButton();
+        break;
+      case 50:
+        this.props.twoButton();
+        break;
+      case 51:
+        this.props.threeButton();
+        break;
+      case 52:
+        this.props.fourButton();
+        break;
+      case 53:
+        this.props.fiveButton();
+        break;
+      case 54:
+        this.props.sixButton();
+        break;
+      case 55:
+        this.props.sevenButton();
+        break;
+      case 56:
+        this.props.eightButton();
+        break;
+      case 57:
+        this.props.nineButton();
+        break;
+    }
   }
 
   render() {
     return (
       <div onKeyPress={this.handleKey.bind(this)} tabIndex="1">
-        <div className="screenTitle">
+        <div className="screenTitle" >
           <h1>A really Smooth RPN Calculator</h1>
         </div>
-        <div className='screen' onKeyPress={this.handleKey} tabIndex="1">
+        <div className='screen'>
           <div className="register">
             register z: {this.props.currVal[2]} 
           </div>
