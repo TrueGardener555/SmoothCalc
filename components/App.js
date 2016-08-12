@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ScreenView from '../components/ScreenView';
+import ScreenView from './ScreenView';
+import CalcContainer from './CalcContainer';
+
 
 class App extends Component {
   constructor() {
@@ -115,29 +117,29 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-      <ScreenView 
-        currVal={this.state.currVal}
-        oneButton={this.oneButton.bind(this)}
-        twoButton={this.twoButton.bind(this)}
-        threeButton={this.threeButton.bind(this)}
-        addButton={this.addButton.bind(this)}
-        subtractButton={this.subtractButton.bind(this)}
-        fourButton={this.fourButton.bind(this)}
-        fiveButton={this.fiveButton.bind(this)}
-        sixButton={this.sixButton.bind(this)}
-        sevenButton={this.sevenButton.bind(this)}
-        eightButton={this.eightButton.bind(this)}
-        nineButton={this.nineButton.bind(this)}
-        multiplyButton={this.multiplyButton.bind(this)}
-        divideButton={this.divideButton.bind(this)}
-        powerButton={this.powerButton.bind(this)}
-        zeroButton={this.zeroButton.bind(this)}
-        backspaceButton={this.backspaceButton.bind(this)}
-        decimalButton={this.decimalButton.bind(this)}
-        plusMinusButton={this.plusMinusButton.bind(this)}
-        enterButton={this.enterButton.bind(this)}
-        clearButton={this.clearButton.bind(this)}
-      />
+        <CalcContainer
+          currVal={this.state.currVal}
+          oneButton={this.oneButton.bind(this)}
+          twoButton={this.twoButton.bind(this)}
+          threeButton={this.threeButton.bind(this)}
+          addButton={this.addButton.bind(this)}
+          subtractButton={this.subtractButton.bind(this)}
+          fourButton={this.fourButton.bind(this)}
+          fiveButton={this.fiveButton.bind(this)}
+          sixButton={this.sixButton.bind(this)}
+          sevenButton={this.sevenButton.bind(this)}
+          eightButton={this.eightButton.bind(this)}
+          nineButton={this.nineButton.bind(this)}
+          multiplyButton={this.multiplyButton.bind(this)}
+          divideButton={this.divideButton.bind(this)}
+          powerButton={this.powerButton.bind(this)}
+          zeroButton={this.zeroButton.bind(this)}
+          backspaceButton={this.backspaceButton.bind(this)}
+          decimalButton={this.decimalButton.bind(this)}
+          plusMinusButton={this.plusMinusButton.bind(this)}
+          enterButton={this.enterButton.bind(this)}
+          clearButton={this.clearButton.bind(this)}
+        />
       </div>
     );
   }
