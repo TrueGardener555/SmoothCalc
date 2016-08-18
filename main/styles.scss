@@ -7,7 +7,6 @@
 body {
   color: blue;
   font-size: 30px;
-  // background: green;
   background: #65a9d7;
   background: -webkit-gradient(linear, left top, left bottom, from(#163b2d), to(#65a9d7));
   background: -webkit-linear-gradient(top, #163b2d, #65a9d7);
@@ -42,6 +41,8 @@ button {
   font-family: Georgia, serif;
   text-decoration: none;
   vertical-align: middle;
+  margin-right: 1px;
+  margin-left: 1px;
 }
 .button:hover {
   border-top-color: #28597a;
@@ -67,34 +68,41 @@ $pad: 20px;
 }
 
 .col-1-5 {
-  width: 20%;
+  width: 18%;
 }
 
 .screen {
-  // border: 5px solid #28283e;
-  // background-color: #e0e0eb;
-  color: white;
+  border: 5px solid #28283e;
+  background-color: #61705D;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  color: #000000;
   font-size: 24px;  
   padding-left: 5px;
+  padding-right: 5px;
   width: 40%;
   margin: auto;
 
-  background: #65a9d7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#163b2d), to(#65a9d7));
-  background: -webkit-linear-gradient(top, #163b2d, #65a9d7);
-  background: -moz-linear-gradient(top, #163b2d, #65a9d7);
-  background: -ms-linear-gradient(top, #163b2d, #65a9d7);
-  background: -o-linear-gradient(top, #163b2d, #65a9d7);
-
 }
 
-.register {
+.register { 
+  clear: both;  
+}
+
+.row {
+  overflow: hidden;
+  border: solid green 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 30px;
 }
 
 .allButtons {
-  width: 40%;
+  overflow: hidden;
+  border: solid red 3px;
   margin: auto;
+  width: 450px;
   text-align: center;
+  clear: both;
 }
 
 .screenTitle {
@@ -110,5 +118,11 @@ $pad: 20px;
 
 .btn {
   margin: 0px 8px 0px 8px;
-  
+}
+
+.alignleft {
+  float: left;
+}
+.alignRight {
+  float: right;
 }

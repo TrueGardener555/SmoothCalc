@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import App from '../components/App';
-// import styles from './styles.css';
-import styles from './sassDemo.scss';
+import styles from './styles.scss';
 
 render(
   // Define the encompassing components

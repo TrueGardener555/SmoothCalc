@@ -4,15 +4,14 @@ const ScreenView = (props) => {
   return (
   <div>
     <div className='screen'>
-      {console.log('this.props', props)}
       <div className="register">
-        register z: {props.currVal[2]} 
+        <span className='alignLeft'>z: </span> <span className="alignRight">{props.currVal[2]}</span> 
       </div>
       <div className="register">
-        register y: {props.currVal[1]} 
+        <span className='alignLeft'>y: </span> <span className="alignRight">{props.currVal[1]}</span> 
       </div>
       <div className="register">
-        register x: {props.currVal[0]} 
+        <span className='alignLeft'>x: </span> <span className="alignRight">{props.currVal[0]}</span> 
       </div>
     </div>    
   </div>

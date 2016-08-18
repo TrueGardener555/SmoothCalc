@@ -53,11 +53,14 @@ class ButtonView extends Component {
   }
 
   render() {
+    var divStyle = {
+      width: 10
+    };
     return (
       <div onKeyPress={this.handleKey.bind(this)} tabIndex="1">
         <div className="allButtons" >
           <div className='row'>
-            <div className="col-1-5 button" >7</div>
+            <div className="col-1-5 button" onClick={this.props.sevenButton}>7</div>
             <div className="col-1-5 button" onClick={this.props.eightButton}>8</div>
             <div className="col-1-5 button" onClick={this.props.nineButton}>9</div>
             <div className="col-1-5 button" onClick={this.props.powerButton}>y^x</div>
